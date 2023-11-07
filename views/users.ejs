@@ -7,19 +7,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   </head>
   <body class="d-flex gap-5 p-5">
-    <% allUsers.forEach(user =>{ %>
       <div class="card" style="width: 18rem;">
-        <img src="<%= user.picture%>" class="card-img-top" alt="..." style="height: 25rem;">
+        <img src="<%= users.picture%>" class="card-img-top" alt="..." style="height: 25rem;">
         <div class="card-body">
-          <h5 class="card-title"><%= user.username %></h5>
+          <h5 class="card-title"><%= users.username %></h5>
           <p class="card-text"></p>
-          <small><%=user.likes.length%></small>
+          <small><%=users.likes%></small>
           <br>
           <br>
-          <a href="/like/<%= user._id%>" class="btn btn-primary">Likes</a>
+          <a href="/like/<%= users.username %>" class="btn btn-primary">Likes</a>
         </div>
-      </div>  
-    <% })%>
-    
+      </div>      
     </body>
 </html>
